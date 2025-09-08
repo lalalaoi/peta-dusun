@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_c7b56ead0d24ef6e6aec6bf244f5f058 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+<div style="position: fixed; 
+     bottom: 50px; left: 50px; width: 140px; height: 90px; 
+     background-color: white; z-index:9999; font-size:14px;
+     border:2px solid black; padding: 10px;">
+<b>Legenda</b><br>
+<i style="background:yellow; width:10px; height:10px; float:left; margin-right:5px;"></i> Dusun Kedungboto<br>
+<i style="background:green; width:10px; height:10px; float:left; margin-right:5px;"></i> Perkebunan<br>
+</div>
+    
+            <div class="folium-map" id="map_c7b56ead0d24ef6e6aec6bf244f5f058" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_c7b56ead0d24ef6e6aec6bf244f5f058 = L.map(
+                "map_c7b56ead0d24ef6e6aec6bf244f5f058",
+                {
+                    center: [3.694759, 101.513013],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 15,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_2662b5a13967a580d57a2875830706a0 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_2662b5a13967a580d57a2875830706a0.addTo(map_c7b56ead0d24ef6e6aec6bf244f5f058);
+        
+    
+            var polygon_cb51bf98d8e47697626468295b7a7df7 = L.polygon(
+                [[3.6953, 101.5125], [3.6953, 101.5135], [3.6943, 101.5135], [3.6943, 101.5125]],
+                {"bubblingMouseEvents": true, "color": "yellow", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_c7b56ead0d24ef6e6aec6bf244f5f058);
+        
+    
+        var popup_6a7daf33ea020d3d6b2101f5b5e78153 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ba8d74cb7f13f01caadc062718a1e8f5 = $(`<div id="html_ba8d74cb7f13f01caadc062718a1e8f5" style="width: 100.0%; height: 100.0%;">Dusun Kedungboto</div>`)[0];
+                popup_6a7daf33ea020d3d6b2101f5b5e78153.setContent(html_ba8d74cb7f13f01caadc062718a1e8f5);
+            
+        
+
+        polygon_cb51bf98d8e47697626468295b7a7df7.bindPopup(popup_6a7daf33ea020d3d6b2101f5b5e78153)
+        ;
+
+        
+    
+    
+            var polygon_4610f082c2212555dc8987a3081e71cb = L.polygon(
+                [[3.696, 101.514], [3.696, 101.515], [3.695, 101.515], [3.695, 101.514]],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_c7b56ead0d24ef6e6aec6bf244f5f058);
+        
+    
+        var popup_67a4d4ceafc02e85996bd123427e164c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9c5b77d36928567fcb3918c8bd844e58 = $(`<div id="html_9c5b77d36928567fcb3918c8bd844e58" style="width: 100.0%; height: 100.0%;">Perkebunan</div>`)[0];
+                popup_67a4d4ceafc02e85996bd123427e164c.setContent(html_9c5b77d36928567fcb3918c8bd844e58);
+            
+        
+
+        polygon_4610f082c2212555dc8987a3081e71cb.bindPopup(popup_67a4d4ceafc02e85996bd123427e164c)
+        ;
+
+        
+    
+    
+            var marker_5418b7c4adc543ff3d4555ca01d044b2 = L.marker(
+                [3.694759, 101.513013],
+                {
+}
+            ).addTo(map_c7b56ead0d24ef6e6aec6bf244f5f058);
+        
+    
+        var popup_fbe8e81df18b9a7ff5ba91ce846bbd3c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5ced981e585add1e1ace3ff1f32edce0 = $(`<div id="html_5ced981e585add1e1ace3ff1f32edce0" style="width: 100.0%; height: 100.0%;">Kampung Ketoyong</div>`)[0];
+                popup_fbe8e81df18b9a7ff5ba91ce846bbd3c.setContent(html_5ced981e585add1e1ace3ff1f32edce0);
+            
+        
+
+        marker_5418b7c4adc543ff3d4555ca01d044b2.bindPopup(popup_fbe8e81df18b9a7ff5ba91ce846bbd3c)
+        ;
+
+        
+    
+    
+            marker_5418b7c4adc543ff3d4555ca01d044b2.bindTooltip(
+                `<div>
+                     Kampung Ketoyong
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+</script>
+</html>
